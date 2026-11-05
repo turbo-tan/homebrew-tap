@@ -1,5 +1,5 @@
 #!/bin/bash
-# Point Formula/tqllm.rb at a tqllm release: ./scripts/release.sh 1.4.3 [bottle.json]
+# Point Formula/tqllm.rb at a tqllm release: ./scripts/release.sh 1.4.2.1 [bottle.json]
 # The bottle (from `brew bottle --json`) is uploaded to this repo's release tqllm-<version> before the formula is pushed.
 set -euo pipefail
 V=$1; F=Formula/tqllm.rb

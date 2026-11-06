@@ -1,9 +1,9 @@
 #!/bin/bash
-# Point Formula/tqllm.rb at a tqllm release: ./scripts/release.sh 1.4.2.1 [bottle.json]
+# Point Formula/tqllm.rb at a tqllm release: ./scripts/release.sh 1.4.2.1 [bottle.json] (TAG=mac-v1.4.2.1 for a Mac-only tag)
 # The bottle (from `brew bottle --json`) is uploaded to this repo's release tqllm-<version> before the formula is pushed.
 set -euo pipefail
 V=$1; F=Formula/tqllm.rb
-URL=https://github.com/turbo-tan/tqllm/archive/refs/tags/v$V.tar.gz
+URL=https://github.com/turbo-tan/tqllm/archive/refs/tags/${TAG:-v$V}.tar.gz
 SHA=$(curl -fsSL "$URL" | sha256sum | cut -d' ' -f1)
 sed -i -e "s|^  url .*|  url \"$URL\"|" -e "s|^  sha256 .*|  sha256 \"$SHA\"|" "$F"
 sed -i '/^  bottle do/,/^  end/d' "$F"

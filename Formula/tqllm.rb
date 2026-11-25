@@ -1,8 +1,8 @@
 class Tqllm < Formula
   desc "Fast exact LLM serving on Apple Silicon (tqserve on MLX)"
   homepage "https://tqllm.com"
-  url "https://github.com/turbo-tan/tqllm/archive/refs/tags/v1.8.0.tar.gz"
-  sha256 "28751c21de7db5214538651ad6030674171a08ff0d374e8d8db2d9ed11d70c9d"
+  url "https://github.com/turbo-tan/tqllm/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "d51198e6f4f50b889978dbbf22f2fdadc91a57800e280633277f53e87cc43115"
   license "Apache-2.0"
   head "https://github.com/turbo-tan/tqllm.git", branch: "main"
 
